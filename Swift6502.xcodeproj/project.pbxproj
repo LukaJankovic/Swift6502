@@ -3,11 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A12484D82672A762009E07AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484D72672A762009E07AB /* main.swift */; };
+		A12484DF2672A800009E07AB /* cpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484DE2672A800009E07AB /* cpu.swift */; };
+		A1389B022698907C00824375 /* asl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1389B012698907C00824375 /* asl.swift */; };
+		A13D9802269786580075126B /* lda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9801269786580075126B /* lda.swift */; };
+		A13D9804269794720075126B /* ldx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9803269794720075126B /* ldx.swift */; };
+		A13D9806269794DA0075126B /* ldy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9805269794DA0075126B /* ldy.swift */; };
+		A13D9808269794EE0075126B /* sta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9807269794EE0075126B /* sta.swift */; };
+		A13D980A269794FF0075126B /* jmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9809269794FF0075126B /* jmp.swift */; };
+		A13D980C26979D280075126B /* stx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D980B26979D280075126B /* stx.swift */; };
+		A13D980E26979DCE0075126B /* sty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D980D26979DCE0075126B /* sty.swift */; };
+		A13D98172697AD290075126B /* source.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D98162697AD290075126B /* source.swift */; };
+		A13D981A269855C80075126B /* adc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9819269855C80075126B /* adc.swift */; };
+		A13D981C26988B750075126B /* and.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D981B26988B750075126B /* and.swift */; };
+		A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D65269C8A6C00EF04E2 /* transfer.swift */; };
+		A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D67269C8C0F00EF04E2 /* branch.swift */; };
+		A1FDA216269CD89E009B2EB3 /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDA215269CD89E009B2EB3 /* status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +38,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A12484D42672A762009E07AB /* SFOT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SFOT; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12484D42672A762009E07AB /* Swift6502 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift6502; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12484D72672A762009E07AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A12484DE2672A800009E07AB /* cpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cpu.swift; sourceTree = "<group>"; };
+		A1389B012698907C00824375 /* asl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asl.swift; sourceTree = "<group>"; };
+		A13D9801269786580075126B /* lda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lda.swift; sourceTree = "<group>"; };
+		A13D9803269794720075126B /* ldx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ldx.swift; sourceTree = "<group>"; };
+		A13D9805269794DA0075126B /* ldy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ldy.swift; sourceTree = "<group>"; };
+		A13D9807269794EE0075126B /* sta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sta.swift; sourceTree = "<group>"; };
+		A13D9809269794FF0075126B /* jmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmp.swift; sourceTree = "<group>"; };
+		A13D980B26979D280075126B /* stx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stx.swift; sourceTree = "<group>"; };
+		A13D980D26979DCE0075126B /* sty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sty.swift; sourceTree = "<group>"; };
+		A13D98152697A8690075126B /* asmx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = asmx; sourceTree = "<group>"; };
+		A13D98162697AD290075126B /* source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = source.swift; sourceTree = "<group>"; };
+		A13D98182697B9290075126B /* test.asm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm.asm; path = test.asm; sourceTree = "<group>"; };
+		A13D9819269855C80075126B /* adc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adc.swift; sourceTree = "<group>"; };
+		A13D981B26988B750075126B /* and.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = and.swift; sourceTree = "<group>"; };
+		A17E5D65269C8A6C00EF04E2 /* transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transfer.swift; sourceTree = "<group>"; };
+		A17E5D67269C8C0F00EF04E2 /* branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = branch.swift; sourceTree = "<group>"; };
+		A1FDA215269CD89E009B2EB3 /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +73,7 @@
 		A12484CB2672A761009E07AB = {
 			isa = PBXGroup;
 			children = (
-				A12484D62672A762009E07AB /* SFOT */,
+				A12484D62672A762009E07AB /* Swift8bit */,
 				A12484D52672A762009E07AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,37 +81,71 @@
 		A12484D52672A762009E07AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A12484D42672A762009E07AB /* SFOT */,
+				A12484D42672A762009E07AB /* Swift6502 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A12484D62672A762009E07AB /* SFOT */ = {
+		A12484D62672A762009E07AB /* Swift8bit */ = {
 			isa = PBXGroup;
 			children = (
+				A13D98102697A41A0075126B /* ASM */,
+				A13D9800269786270075126B /* 6502 */,
+				A13D98162697AD290075126B /* source.swift */,
 				A12484D72672A762009E07AB /* main.swift */,
+				A13D98152697A8690075126B /* asmx */,
 			);
-			path = SFOT;
+			path = Swift8bit;
+			sourceTree = "<group>";
+		};
+		A13D9800269786270075126B /* 6502 */ = {
+			isa = PBXGroup;
+			children = (
+				A12484DE2672A800009E07AB /* cpu.swift */,
+				A13D9801269786580075126B /* lda.swift */,
+				A13D9803269794720075126B /* ldx.swift */,
+				A13D9805269794DA0075126B /* ldy.swift */,
+				A13D9807269794EE0075126B /* sta.swift */,
+				A13D980B26979D280075126B /* stx.swift */,
+				A13D980D26979DCE0075126B /* sty.swift */,
+				A13D9809269794FF0075126B /* jmp.swift */,
+				A13D9819269855C80075126B /* adc.swift */,
+				A13D981B26988B750075126B /* and.swift */,
+				A1389B012698907C00824375 /* asl.swift */,
+				A17E5D65269C8A6C00EF04E2 /* transfer.swift */,
+				A17E5D67269C8C0F00EF04E2 /* branch.swift */,
+				A1FDA215269CD89E009B2EB3 /* status.swift */,
+			);
+			path = 6502;
+			sourceTree = "<group>";
+		};
+		A13D98102697A41A0075126B /* ASM */ = {
+			isa = PBXGroup;
+			children = (
+				A13D98182697B9290075126B /* test.asm */,
+			);
+			path = ASM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A12484D32672A761009E07AB /* SFOT */ = {
+		A12484D32672A761009E07AB /* Swift6502 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A12484DB2672A762009E07AB /* Build configuration list for PBXNativeTarget "SFOT" */;
+			buildConfigurationList = A12484DB2672A762009E07AB /* Build configuration list for PBXNativeTarget "Swift6502" */;
 			buildPhases = (
 				A12484D02672A761009E07AB /* Sources */,
 				A12484D12672A761009E07AB /* Frameworks */,
 				A12484D22672A761009E07AB /* CopyFiles */,
+				A13D98132697A4B30075126B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SFOT;
+			name = Swift6502;
 			productName = SFOT;
-			productReference = A12484D42672A762009E07AB /* SFOT */;
+			productReference = A12484D42672A762009E07AB /* Swift6502 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A12484CF2672A761009E07AB /* Build configuration list for PBXProject "SFOT" */;
+			buildConfigurationList = A12484CF2672A761009E07AB /* Build configuration list for PBXProject "Swift6502" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,17 +175,54 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A12484D32672A761009E07AB /* SFOT */,
+				A12484D32672A761009E07AB /* Swift6502 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A13D98132697A4B30075126B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "FILES=\"Swift8bit/ASM/*.asm\"\nfor f in $FILES\ndo\n    Swift8bit/asmx -C 6502 -o $TARGET_BUILD_DIR/$(basename $f .asm).hex $f\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A12484D02672A761009E07AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13D9804269794720075126B /* ldx.swift in Sources */,
+				A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */,
+				A13D981A269855C80075126B /* adc.swift in Sources */,
+				A13D980E26979DCE0075126B /* sty.swift in Sources */,
+				A13D980A269794FF0075126B /* jmp.swift in Sources */,
+				A13D9806269794DA0075126B /* ldy.swift in Sources */,
+				A13D98172697AD290075126B /* source.swift in Sources */,
+				A1389B022698907C00824375 /* asl.swift in Sources */,
+				A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */,
+				A13D980C26979D280075126B /* stx.swift in Sources */,
+				A12484DF2672A800009E07AB /* cpu.swift in Sources */,
+				A13D9802269786580075126B /* lda.swift in Sources */,
+				A13D9808269794EE0075126B /* sta.swift in Sources */,
+				A1FDA216269CD89E009B2EB3 /* status.swift in Sources */,
 				A12484D82672A762009E07AB /* main.swift in Sources */,
+				A13D981C26988B750075126B /* and.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A12484CF2672A761009E07AB /* Build configuration list for PBXProject "SFOT" */ = {
+		A12484CF2672A761009E07AB /* Build configuration list for PBXProject "Swift6502" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A12484D92672A762009E07AB /* Debug */,
@@ -271,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A12484DB2672A762009E07AB /* Build configuration list for PBXNativeTarget "SFOT" */ = {
+		A12484DB2672A762009E07AB /* Build configuration list for PBXNativeTarget "Swift6502" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A12484DC2672A762009E07AB /* Debug */,
