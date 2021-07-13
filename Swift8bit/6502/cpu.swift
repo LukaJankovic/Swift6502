@@ -171,7 +171,7 @@ class cpu {
     }
     
     func fetchByte(memory: [UInt8]) -> UInt8 {
-        if PC > memory.count {
+        if PC >= memory.count - 1 {
             PC = 0;
         }
         let data = readByte(memory: memory, address: Int(PC));

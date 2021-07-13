@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1116ECA269E3EFD003B3C3F /* lsr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1116EC9269E3EFD003B3C3F /* lsr.swift */; };
 		A12484D82672A762009E07AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484D72672A762009E07AB /* main.swift */; };
 		A12484DF2672A800009E07AB /* cpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484DE2672A800009E07AB /* cpu.swift */; };
 		A134710A269DB99900F7842E /* sbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1347109269DB99900F7842E /* sbc.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1116EC9269E3EFD003B3C3F /* lsr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lsr.swift; sourceTree = "<group>"; };
 		A12484D42672A762009E07AB /* Swift6502 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift6502; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12484D72672A762009E07AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A12484DE2672A800009E07AB /* cpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cpu.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				A1B74DE5269DB4B9009E1B42 /* eor.swift */,
 				A1B74DE7269DB771009E1B42 /* ora.swift */,
 				A1389B012698907C00824375 /* asl.swift */,
+				A1116EC9269E3EFD003B3C3F /* lsr.swift */,
 				A1B74DE9269DB7F1009E1B42 /* bit.swift */,
 				A134710B269DBC4500F7842E /* cmp.swift */,
 				A17E5D65269C8A6C00EF04E2 /* transfer.swift */,
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13D9804269794720075126B /* ldx.swift in Sources */,
+				A1116ECA269E3EFD003B3C3F /* lsr.swift in Sources */,
 				A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */,
 				A13D981A269855C80075126B /* adc.swift in Sources */,
 				A134710C269DBC4500F7842E /* cmp.swift in Sources */,
