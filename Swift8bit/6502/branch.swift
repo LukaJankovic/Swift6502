@@ -58,7 +58,7 @@ extension cpu {
     
     func BVC(memory: [UInt8]) -> [UInt8] {
         cycles += 1;
-        if !O {
+        if !V {
             PC += UInt16(fetchByte(memory: memory));
         }
         return memory;
@@ -66,7 +66,7 @@ extension cpu {
     
     func BVS(memory: [UInt8]) -> [UInt8] {
         cycles += 1;
-        if O {
+        if V {
             PC += UInt16(fetchByte(memory: memory));
         }
         return memory;

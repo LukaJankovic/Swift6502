@@ -21,7 +21,7 @@ class cpu {
     var I: Bool     = false; // Interrupt disable
     var D: Bool     = false; // Decimal mode
     var B: Bool     = false; // Break
-    var O: Bool     = false; // Overflow
+    var V: Bool     = false; // Overflow
     var N: Bool     = false; // Negative
     
     var cycles: Int = 0;
@@ -70,12 +70,48 @@ class cpu {
             0x7D: ADC_AB_X,
             0x79: ADC_AB_Y,
             
+            0xE9: SBC_IM,
+            0xE5: SBC_ZP,
+            0xF5: SBC_ZP_X,
+            0xED: SBC_AB,
+            0xFD: SBC_AB_X,
+            0xF9: SBC_AB_Y,
+            
+            0xC9: CMP_IM,
+            0xC5: CMP_ZP,
+            0xD5: CMP_ZP_X,
+            0xCD: CMP_AB,
+            0xDD: CMP_AB_X,
+            0xD9: CMP_AB_Y,
+            
+            0xE0: CPX_IM,
+            0xE4: CPX_ZP,
+            0xEC: CPX_AB,
+            
+            0xC0: CPY_IM,
+            0xC4: CPY_ZP,
+            0xCC: CPY_AB,
+            
             0x29: AND_IM,
             0x25: AND_ZP,
             0x35: AND_ZP_X,
             0x2D: AND_AB,
             0x3D: AND_AB_X,
             0x39: AND_AB_Y,
+            
+            0x49: EOR_IM,
+            0x45: EOR_ZP,
+            0x55: EOR_ZP_X,
+            0x4D: EOR_AB,
+            0x5D: EOR_AB_X,
+            0x59: EOR_AB_Y,
+            
+            0x09: ORA_IM,
+            0x05: ORA_ZP,
+            0x15: ORA_ZP_X,
+            0x0D: ORA_AB,
+            0x1D: ORA_AB_X,
+            0x19: ORA_AB_Y,
             
             0x0A: ASL_AC,
             0x06: ASL_ZP,
@@ -105,6 +141,9 @@ class cpu {
             0xF8: SED,
             0x78: SEI,
             
+            0x24: BIT_ZP,
+            0x2C: BIT_AB,
+            
             0x4C: JMP_AB
         ]
     }
@@ -122,7 +161,7 @@ class cpu {
         I = false;
         D = false;
         B = false;
-        O = false;
+        V = false;
         N = false;
     }
     

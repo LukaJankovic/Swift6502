@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A12484D82672A762009E07AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484D72672A762009E07AB /* main.swift */; };
 		A12484DF2672A800009E07AB /* cpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12484DE2672A800009E07AB /* cpu.swift */; };
+		A134710A269DB99900F7842E /* sbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1347109269DB99900F7842E /* sbc.swift */; };
+		A134710C269DBC4500F7842E /* cmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134710B269DBC4500F7842E /* cmp.swift */; };
 		A1389B022698907C00824375 /* asl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1389B012698907C00824375 /* asl.swift */; };
 		A13D9802269786580075126B /* lda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9801269786580075126B /* lda.swift */; };
 		A13D9804269794720075126B /* ldx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D9803269794720075126B /* ldx.swift */; };
@@ -22,6 +24,9 @@
 		A13D981C26988B750075126B /* and.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D981B26988B750075126B /* and.swift */; };
 		A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D65269C8A6C00EF04E2 /* transfer.swift */; };
 		A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D67269C8C0F00EF04E2 /* branch.swift */; };
+		A1B74DE6269DB4B9009E1B42 /* eor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE5269DB4B9009E1B42 /* eor.swift */; };
+		A1B74DE8269DB771009E1B42 /* ora.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE7269DB771009E1B42 /* ora.swift */; };
+		A1B74DEA269DB7F1009E1B42 /* bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE9269DB7F1009E1B42 /* bit.swift */; };
 		A1FDA216269CD89E009B2EB3 /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FDA215269CD89E009B2EB3 /* status.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,8 @@
 		A12484D42672A762009E07AB /* Swift6502 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift6502; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12484D72672A762009E07AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A12484DE2672A800009E07AB /* cpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cpu.swift; sourceTree = "<group>"; };
+		A1347109269DB99900F7842E /* sbc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sbc.swift; sourceTree = "<group>"; };
+		A134710B269DBC4500F7842E /* cmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmp.swift; sourceTree = "<group>"; };
 		A1389B012698907C00824375 /* asl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asl.swift; sourceTree = "<group>"; };
 		A13D9801269786580075126B /* lda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lda.swift; sourceTree = "<group>"; };
 		A13D9803269794720075126B /* ldx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ldx.swift; sourceTree = "<group>"; };
@@ -56,6 +63,9 @@
 		A13D981B26988B750075126B /* and.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = and.swift; sourceTree = "<group>"; };
 		A17E5D65269C8A6C00EF04E2 /* transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transfer.swift; sourceTree = "<group>"; };
 		A17E5D67269C8C0F00EF04E2 /* branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = branch.swift; sourceTree = "<group>"; };
+		A1B74DE5269DB4B9009E1B42 /* eor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eor.swift; sourceTree = "<group>"; };
+		A1B74DE7269DB771009E1B42 /* ora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ora.swift; sourceTree = "<group>"; };
+		A1B74DE9269DB7F1009E1B42 /* bit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bit.swift; sourceTree = "<group>"; };
 		A1FDA215269CD89E009B2EB3 /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +120,13 @@
 				A13D980D26979DCE0075126B /* sty.swift */,
 				A13D9809269794FF0075126B /* jmp.swift */,
 				A13D9819269855C80075126B /* adc.swift */,
+				A1347109269DB99900F7842E /* sbc.swift */,
 				A13D981B26988B750075126B /* and.swift */,
+				A1B74DE5269DB4B9009E1B42 /* eor.swift */,
+				A1B74DE7269DB771009E1B42 /* ora.swift */,
 				A1389B012698907C00824375 /* asl.swift */,
+				A1B74DE9269DB7F1009E1B42 /* bit.swift */,
+				A134710B269DBC4500F7842E /* cmp.swift */,
 				A17E5D65269C8A6C00EF04E2 /* transfer.swift */,
 				A17E5D67269C8C0F00EF04E2 /* branch.swift */,
 				A1FDA215269CD89E009B2EB3 /* status.swift */,
@@ -210,18 +225,23 @@
 				A13D9804269794720075126B /* ldx.swift in Sources */,
 				A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */,
 				A13D981A269855C80075126B /* adc.swift in Sources */,
+				A134710C269DBC4500F7842E /* cmp.swift in Sources */,
 				A13D980E26979DCE0075126B /* sty.swift in Sources */,
 				A13D980A269794FF0075126B /* jmp.swift in Sources */,
 				A13D9806269794DA0075126B /* ldy.swift in Sources */,
 				A13D98172697AD290075126B /* source.swift in Sources */,
 				A1389B022698907C00824375 /* asl.swift in Sources */,
+				A134710A269DB99900F7842E /* sbc.swift in Sources */,
 				A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */,
 				A13D980C26979D280075126B /* stx.swift in Sources */,
 				A12484DF2672A800009E07AB /* cpu.swift in Sources */,
 				A13D9802269786580075126B /* lda.swift in Sources */,
 				A13D9808269794EE0075126B /* sta.swift in Sources */,
+				A1B74DEA269DB7F1009E1B42 /* bit.swift in Sources */,
+				A1B74DE6269DB4B9009E1B42 /* eor.swift in Sources */,
 				A1FDA216269CD89E009B2EB3 /* status.swift in Sources */,
 				A12484D82672A762009E07AB /* main.swift in Sources */,
+				A1B74DE8269DB771009E1B42 /* ora.swift in Sources */,
 				A13D981C26988B750075126B /* and.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

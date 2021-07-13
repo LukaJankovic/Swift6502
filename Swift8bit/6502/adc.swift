@@ -22,9 +22,7 @@ extension cpu {
         }
         
         C = carry;
-        print(((A ^ other) >> 7) == 0)
-        print(((UInt16(A) ^ res) >> 7 != 0));
-        O = ((A ^ other) >> 7) == 0 && (((UInt16(A) ^ res) >> 7) != 0);
+        V = ((A ^ other) >> 7) == 0 && (((UInt16(A) ^ res) >> 7) != 0);
         updateZNFlags(registry: UInt8(res));
         return UInt8(res);
     }

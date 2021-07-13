@@ -28,7 +28,7 @@ extension cpu {
     
     func CLV(memory: [UInt8]) -> [UInt8] {
         cycles += 2;
-        O = false;
+        V = false;
         return memory;
     }
     
