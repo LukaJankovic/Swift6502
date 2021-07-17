@@ -25,6 +25,8 @@
 		A13D981C26988B750075126B /* and.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13D981B26988B750075126B /* and.swift */; };
 		A17E5D66269C8A6C00EF04E2 /* transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D65269C8A6C00EF04E2 /* transfer.swift */; };
 		A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E5D67269C8C0F00EF04E2 /* branch.swift */; };
+		A1ACC00A26A30A6700A93EA8 /* inc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACC00926A30A6700A93EA8 /* inc.swift */; };
+		A1ACC00C26A311BC00A93EA8 /* dec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACC00B26A311BC00A93EA8 /* dec.swift */; };
 		A1B74DE6269DB4B9009E1B42 /* eor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE5269DB4B9009E1B42 /* eor.swift */; };
 		A1B74DE8269DB771009E1B42 /* ora.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE7269DB771009E1B42 /* ora.swift */; };
 		A1B74DEA269DB7F1009E1B42 /* bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B74DE9269DB7F1009E1B42 /* bit.swift */; };
@@ -65,6 +67,8 @@
 		A13D981B26988B750075126B /* and.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = and.swift; sourceTree = "<group>"; };
 		A17E5D65269C8A6C00EF04E2 /* transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transfer.swift; sourceTree = "<group>"; };
 		A17E5D67269C8C0F00EF04E2 /* branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = branch.swift; sourceTree = "<group>"; };
+		A1ACC00926A30A6700A93EA8 /* inc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inc.swift; sourceTree = "<group>"; };
+		A1ACC00B26A311BC00A93EA8 /* dec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dec.swift; sourceTree = "<group>"; };
 		A1B74DE5269DB4B9009E1B42 /* eor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eor.swift; sourceTree = "<group>"; };
 		A1B74DE7269DB771009E1B42 /* ora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ora.swift; sourceTree = "<group>"; };
 		A1B74DE9269DB7F1009E1B42 /* bit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bit.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				A1116EC9269E3EFD003B3C3F /* lsr.swift */,
 				A1B74DE9269DB7F1009E1B42 /* bit.swift */,
 				A134710B269DBC4500F7842E /* cmp.swift */,
+				A1ACC00926A30A6700A93EA8 /* inc.swift */,
+				A1ACC00B26A311BC00A93EA8 /* dec.swift */,
 				A17E5D65269C8A6C00EF04E2 /* transfer.swift */,
 				A17E5D67269C8C0F00EF04E2 /* branch.swift */,
 				A1FDA215269CD89E009B2EB3 /* status.swift */,
@@ -237,9 +243,11 @@
 				A1389B022698907C00824375 /* asl.swift in Sources */,
 				A134710A269DB99900F7842E /* sbc.swift in Sources */,
 				A17E5D68269C8C0F00EF04E2 /* branch.swift in Sources */,
+				A1ACC00A26A30A6700A93EA8 /* inc.swift in Sources */,
 				A13D980C26979D280075126B /* stx.swift in Sources */,
 				A12484DF2672A800009E07AB /* cpu.swift in Sources */,
 				A13D9802269786580075126B /* lda.swift in Sources */,
+				A1ACC00C26A311BC00A93EA8 /* dec.swift in Sources */,
 				A13D9808269794EE0075126B /* sta.swift in Sources */,
 				A1B74DEA269DB7F1009E1B42 /* bit.swift in Sources */,
 				A1B74DE6269DB4B9009E1B42 /* eor.swift in Sources */,

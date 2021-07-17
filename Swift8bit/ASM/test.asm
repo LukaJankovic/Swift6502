@@ -1,2 +1,4 @@
-    LDA #%11111111
-    ASL A
+    LDX #$FE
+LOOP:
+    INX
+    JMP LOOP

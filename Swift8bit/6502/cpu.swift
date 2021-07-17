@@ -144,6 +144,14 @@ class cpu {
             0x24: BIT_ZP,
             0x2C: BIT_AB,
             
+            0xE6: INC_ZP,
+            0xF6: INC_ZP_X,
+            0xEE: INC_AB,
+            0xFE: INC_AB_X,
+            
+            0xE8: INX,
+            0xC8: INY,
+            
             0x4C: JMP_AB
         ]
     }
@@ -171,15 +179,15 @@ class cpu {
     }
     
     func fetchByte(memory: [UInt8]) -> UInt8 {
-        if PC >= memory.count - 1 {
-            PC = 0;
-        }
         let data = readByte(memory: memory, address: Int(PC));
         PC += 1;
         return data;
     }
     
     func execute(memory: [UInt8]) -> [UInt8] {
+        if PC >= memory.count - 1 {
+            PC = 0;
+        }
         let instruction = fetchByte(memory: memory);
         var memoryNew: [UInt8] = [];
         if let operation = opcodes[instruction] {
