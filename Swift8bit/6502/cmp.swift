@@ -25,7 +25,7 @@ extension cpu {
     }
     
     func CMP_ZP_X(memory: [UInt8]) -> [UInt8] {
-        CMP(reg: A, other: zeroPageX(memory: memory));
+        CMP(reg: A, other: zeroPageReadX(memory: memory));
         return memory;
     }
     

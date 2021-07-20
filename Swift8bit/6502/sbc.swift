@@ -38,7 +38,7 @@ extension cpu {
     }
     
     func SBC_ZP_X(memory: [UInt8]) -> [UInt8] {
-        A = sbc(other: zeroPageX(memory: memory));
+        A = sbc(other: zeroPageReadX(memory: memory));
         return memory;
     }
     

@@ -26,9 +26,10 @@ func readSourceString(source: String) -> [UInt8] {
         sourceCopy.remove(at: source.startIndex);
         let dataSize = Int(sourceCopy.popFirst(2), radix: 16)!;
         let address = Int(sourceCopy.popFirst(4), radix: 16)!;
-        let lineType = Int(sourceCopy.popFirst(2), radix: 16)!;
+        let _ = Int(sourceCopy.popFirst(2), radix: 16)!; // Line type
         
         for i in 0...dataSize - 1 {
+            print(address + i);
             memory[address + i] = UInt8(sourceCopy.popFirst(2), radix: 16)!;
         }
         

@@ -7,9 +7,15 @@
 
 import Foundation
 
+let PC_START: UInt16 = 0x0200;
+
+let STACK_SIZE = 256;
+let STACK_MASK: UInt16 = 0x0100;
+
 class cpu {
-    var PC: UInt16  = 0x0000;   // Program Counter (In reality 0xFFFC)
-    var SP: UInt16  = 0x0100;   // Stack Pointer (In reality only 8 bits, holds lower nibble so 0x0100 to 0x01FF)
+    
+    var PC: UInt16  = PC_START;   // Program Counter (Startup = 0xFFFC)
+    var SP: UInt8   = 0xFF;   // Stack Pointer (0x0100 to 0x01FF in memory)
     
     // General purpose registers
     var A: UInt8    = 0; // Accumulator
@@ -152,13 +158,15 @@ class cpu {
             0xE8: INX,
             0xC8: INY,
             
-            0x4C: JMP_AB
+            0x4C: JMP_AB,
+            0x20: JSR_AB,
+            0x60: RTS
         ]
     }
     
     func reset() {
-        //PC = 0xFFFC;
-        SP = 0x0100;
+        PC = PC_START;
+        SP = 0xFF;
         
         A = 0;
         X = 0;
@@ -193,6 +201,10 @@ class cpu {
         if let operation = opcodes[instruction] {
             memoryNew = operation(memory);
         };
+        
+        if memoryNew.isEmpty {
+            return memory;
+        }
         return memoryNew;
     }
     
@@ -228,11 +240,11 @@ class cpu {
         return readByte(memory: memory, address: Int(zeroPageAddress(memory: memory)));
     }
     
-    func zeroPageX(memory: [UInt8]) -> UInt8 {
+    func zeroPageReadX(memory: [UInt8]) -> UInt8 {
         return readByte(memory: memory, address: Int(zeroPageAddress(memory: memory) + X));
     }
     
-    func zeroPageY(memory: [UInt8]) -> UInt8 {
+    func zeroPageReadY(memory: [UInt8]) -> UInt8 {
         return readByte(memory: memory, address: Int(zeroPageAddress(memory: memory) + Y));
     }
     
@@ -264,5 +276,22 @@ class cpu {
         }
         
         return 0;
+    }
+    
+    fileprivate func getStackAddress() -> Int {
+        return Int(STACK_MASK | UInt16(SP))
+    }
+    
+    func pushStack(val: UInt8, memory: [UInt8]) -> [UInt8] {
+        var memoryCopy = memory;
+        memoryCopy[getStackAddress()] = val;
+        SP -= 1;
+        return memoryCopy;
+    }
+    
+    func popStack(memory: [UInt8]) -> UInt8 {
+        let val = memory[getStackAddress()];
+        SP += 1;
+        return val;
     }
 }

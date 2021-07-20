@@ -21,7 +21,7 @@ extension cpu {
     }
     
     func LDY_ZP_X(memory: [UInt8]) -> [UInt8] {
-        Y = zeroPageY(memory: memory);
+        Y = zeroPageReadY(memory: memory);
         cycles += 1;
         updateZNFlags(registry: Y);
         return memory;

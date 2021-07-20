@@ -14,7 +14,7 @@ do {
         if fileURL?.pathExtension == "hex" {
             do {
                 let sourceString = try String(contentsOfFile: fileURL!.absoluteString, encoding: .utf8);
-                var memory = readSourceString(source: sourceString);
+                var  memory = readSourceString(source: sourceString);
                 
                 let testCpu = cpu();
                 

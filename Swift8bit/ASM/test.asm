@@ -1,4 +1,6 @@
-    LDX #$FE
-LOOP:
+.org 0x0200
+    LDX #10
+    JSR INCREASE
+INCREASE:
     INX
-    JMP LOOP
+    RTS

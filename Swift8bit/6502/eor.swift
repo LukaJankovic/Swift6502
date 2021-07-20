@@ -21,7 +21,7 @@ extension cpu {
     }
     
     func EOR_ZP_X(memory: [UInt8]) -> [UInt8] {
-        A = A ^ zeroPageX(memory: memory);
+        A = A ^ zeroPageReadX(memory: memory);
         updateZNFlags(registry: A);
         return memory;
     }

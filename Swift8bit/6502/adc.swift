@@ -38,7 +38,7 @@ extension cpu {
     }
     
     func ADC_ZP_X(memory: [UInt8]) -> [UInt8] {
-        A = add(other: zeroPageX(memory: memory));
+        A = add(other: zeroPageReadX(memory: memory));
         return memory;
     }
     
