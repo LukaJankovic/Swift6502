@@ -19,13 +19,16 @@ extension cpu {
         // PC - 1 ??
         memoryCopy = pushStack(val: UInt8((PC) >> 8), memory: memoryCopy);
         memoryCopy = pushStack(val: UInt8((PC) & 0x00FF), memory: memoryCopy);
+        
+        PC = absolute(memory: memoryCopy);
+        
         return memoryCopy;
     }
     
     func RTS(memory: [UInt8]) -> [UInt8] {
         let PCLow = popStack(memory: memory);
         let PCHigh = popStack(memory: memory);
-        PC = UInt16(PCLow | (PCHigh << 8));
+        PC = UInt16(PCLow) | UInt16(PCHigh) << 8;
         return memory;
     }
 }

@@ -251,7 +251,7 @@ class cpu {
     /// Returns address
     func absolute(memory: [UInt8]) -> UInt16 {
         // Little endian
-        return UInt16(fetchByte(memory: memory) | (fetchByte(memory: memory) << 8));
+        return UInt16(fetchByte(memory: memory)) | (UInt16(fetchByte(memory: memory)) << 8);
     }
     
     func absoluteX(memory: [UInt8]) -> UInt16 {
@@ -290,8 +290,8 @@ class cpu {
     }
     
     func popStack(memory: [UInt8]) -> UInt8 {
-        let val = memory[getStackAddress()];
         SP += 1;
+        let val = memory[getStackAddress()];
         return val;
     }
 }

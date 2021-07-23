@@ -1,6 +1,9 @@
 .org 0x0200
     LDX #10
-    JSR INCREASE
-INCREASE:
+LOOP:
+    JSR INCREMENT
+    JMP LOOP
+    
+INCREMENT:
     INX
     RTS

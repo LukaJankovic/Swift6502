@@ -29,7 +29,6 @@ func readSourceString(source: String) -> [UInt8] {
         let _ = Int(sourceCopy.popFirst(2), radix: 16)!; // Line type
         
         for i in 0...dataSize - 1 {
-            print(address + i);
             memory[address + i] = UInt8(sourceCopy.popFirst(2), radix: 16)!;
         }
         
